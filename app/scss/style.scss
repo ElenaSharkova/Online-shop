@@ -1,0 +1,43 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header{
+    &__inner{
+       display: flex;
+       justify-content: space-between;
+       align-items: center; /*вертикальное выравнивание*/
+       height: 120px;
+    }
+    &__btn{
+        background-color: transparent; /*фон кнопки такой же как основной фон*/
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.logo{
+    margin: 0 auto;/*максимально отталкнул от себя все слева и справо*/
+}
+
+.menu{
+    &__list{
+        display: flex;
+        padding-left: 35px;
+        padding-right: 60px!important;
+    }
+    &__list-item + .menu__list-item{
+        padding-left: 80px;
+    }
+    &__list-link{
+        @extend %title-font;
+        color: rgba(54, 56, 56, 0.9033);
+        line-height: 22px;
+    }
+}
+
+.header__btn{
+    
+}
