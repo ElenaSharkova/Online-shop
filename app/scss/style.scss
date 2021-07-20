@@ -38,6 +38,66 @@
     }
 }
 
+.rightside-menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 694px;
+    background-color: #fff;
+    padding-top: 20px;
+    width: 100%;
+    z-index: 5;
+    transition: all .6s; /*плавность появления выпадающего меню*/
+    box-shadow: -2px 3px 17px 0px #000; /*разделитель вываливающегося меня от основной страницы*/
+    &.rightside-menu--close{
+        transform: translateX(500%);
+    }
+    &__close{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-bottom: -25px;
+    }
+    &__content{
+       text-align: center;
+        max-width: 485px;
+        margin: 0 auto;
+    }
+    &__logo{
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+    &__title{
+        color: $title;
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 51px;
+        position: relative;
+        margin-bottom: 17px;
+        padding-bottom: 17px;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 252px;
+            margin: 0 auto;
+            height: 1px;
+            background: #6D7278;
+        }
+    }
+    &__text{
+       margin-bottom: 75px;
+    }
+    &__images{
+        max-width: 485px;
+    }
+}
+
 .footer{
     &__content{
        background-color: #DFDFDF;
@@ -145,9 +205,6 @@
     &__menu-list{
         margin-right: 60px;
         width: 125px;
-    }
-    &__menu-link{
-        
     }
     &__social-link,
     &__menu-link{

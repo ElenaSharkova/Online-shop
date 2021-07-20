@@ -9,6 +9,9 @@ body{
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     color: $title;
+    /*Все, что ниже, стандарт для css, чтобы боковое выпадающее меню улетало за пределы экрана*/
+    overflow-x: hidden;
+    min-width: 320px;
 }
 
 .wrapper {
