@@ -6,5 +6,13 @@ $(function () {
    $('.rightside-menu__close').on('click', function () {
        $('.rightside-menu').addClass('rightside-menu--close');
    });
+    
+    $('.top__slider').slick({
+        dots: true, //врубили дотсы
+        arrows: false, // вырубили стрелочки
+        fade: true, // чтобы менялось плавно
+        autoplay: true
+        
+    });
        
    })
