@@ -151,6 +151,91 @@
     }
 }
 
+.new-collection{
+    text-align: center;
+    padding: 45px 0 105px;
+    &__title{
+        color: $title;
+        font-size: 36px;
+        line-height: 50px;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 251px;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: #979797;
+        }
+    }
+    &__text{
+        max-width: 730px;
+        margin: 0 auto 30px; //если блоку указана ширина, его надо после центрировать
+    }
+}
+
+.collection{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    &__item{
+        position: relative;
+        &:hover{
+            .collection__info{
+                opacity: 1;
+            }
+        }
+    }
+    &__images{
+        min-height: 350px;
+        object-fit: cover; //если вставить большую картинку, то она сделается автоматически до нужных размеров
+    }
+    &__info{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(#fff, .7);
+        padding: 10px;// чтобы никто не прислонился к стенкам картинки
+        display: flex; //встали горизонтально
+        flex-direction: column; //обратно встали вертикально друг под другом
+        align-items: center; //контент встал горизонтально по центру
+        justify-content: center; //контент встал вертикально по центру
+        opacity: 0; //блок исчез
+        transition: all .5s;
+    }
+    &__info-title{
+        font-size: 20px;
+        color: $title;
+        line-height: 25px;
+        padding-bottom: 19px;
+        margin-bottom: 19px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            height: 1px;
+            background: #979797;
+            width: 80%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+    }
+    &__info-text{
+        font-weight: 600;
+        font-weight: 14px;
+        color: #707070;
+    }
+}
+
 .footer{
     &__content{
        background-color: #DFDFDF;
