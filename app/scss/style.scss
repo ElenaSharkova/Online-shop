@@ -106,6 +106,7 @@
             content: '';
             background-image: url(../images/slider-bg.jpg);
             position: absolute;
+            background-position: center;
             width: 100%;
             height: 722px;
             top: 0;
@@ -129,6 +130,7 @@
         margin-left: 25px;
     }
     &__slider-title{
+        @extend %title-font;
         color: &title;
         font-size: 110px;
         line-height: 134px;
@@ -155,6 +157,7 @@
     text-align: center;
     padding: 45px 0 105px;
     &__title{
+        @extend %title-font;
         color: $title;
         font-size: 36px;
         line-height: 50px;
@@ -212,6 +215,7 @@
     }
     &__info-title{
         font-size: 20px;
+        @extend %title-font;
         color: $title;
         line-height: 25px;
         padding-bottom: 19px;
@@ -233,6 +237,109 @@
         font-weight: 600;
         font-weight: 14px;
         color: #707070;
+    }
+}
+.decor{
+    padding: 170px 0px 155px;
+    background-image: url('../images/decor-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    &__title{
+        max-width: 540px;
+        @extend %title-font;
+        color: $title;
+        font-size: 60px;
+        line-height: 80px;
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 200px;
+            background: #6D7278;
+        }
+    }
+    &__text{
+        max-width: 540px;
+    }
+}
+.works-path{
+    padding: 80px 0px 30px;
+    &__title{
+        @extend %title-font;
+        color: $title;
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 36px;
+        line-height: 51px;
+    }
+    &__items-box{
+        display: flex;
+        border-bottom: 2px solid rgba($title, .7);
+        position: relative;
+        align-items: flex-end; //чтобы элементы начинались снизу на одном уровне
+        &::after{
+            position: absolute;
+            content: '';
+            bottom: -5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $title;
+        }
+    }
+    &__item{
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap; //чтобы переносились на новую строку, если не хватает места
+        align-items: center; //текст центрируется относительно картинки
+        position: relative;
+        height: 100%;
+    }
+    &__item--prodaction{
+        margin-left: 317px;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            width: 2px;
+            background: rgba($title, .7);
+        }
+    }
+    &__item--prodaction,
+    &__item--consultation{
+        padding-bottom: 38px;
+    }
+    &__item--measuring{
+        padding-top: 38px;
+        margin-left: 305px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 2px;
+            background: rgba($title, .7);
+            
+        }
+    }
+    &__item-title{
+        margin-left: 13px;
+        color: $title;
+        @extend %title-font;
+    }
+    &__item-text{
+        margin-top: 13px;
     }
 }
 
