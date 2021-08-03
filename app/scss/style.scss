@@ -386,6 +386,44 @@
     opacity: none; //исчезает обводка вокруг активной кнопки
 }
 
+.blog-box{
+    padding-bottom: 100px;
+    &__title{
+        color: $title;
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 51px;
+        margin: 0 auto 30px;
+        text-align: center;
+        max-width: 430px;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    &__img-link{
+        display: inline-block;//сделали строчный элемент чтобы к нему применялось все БЛОЧНОЕ
+        margin-bottom: 19px;
+    }
+    &__links{
+        margin-bottom: 9px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #707070;
+    }
+    &__date,
+    &__author,
+    &__theme{
+        color: inherit; //применять значение родителя
+    }
+    &__item-title{
+        color: $title;
+        font-size: 24px;
+        line-height: 38px;
+        @extend %title-font;
+    }
+}
 
 
 .footer{
