@@ -55,6 +55,8 @@
 .breadcrumbs{
     background: rgba(#DFDFDF, .5);
     padding: 13px 14px;
+    position: relative;
+    z-index: 15;
     &__list{
         display: flex;
     }
@@ -413,6 +415,15 @@
         width: 493px;
         height: 559px;
     }
+    &__items-2{
+        
+    }
+    &.gallery-page{
+        .gallery__item:nth-child(8){
+           grid-column: span 2;
+          grid-row: span 2; 
+        }
+    }
 }
 .mixitup-control-active{
     background-color: #FFEF35;
@@ -724,6 +735,14 @@
         margin: 0 auto; //расположили элементы по центру
     }
 }
+
+//CONTACTS
+
+.map{
+    margin-top: -53px;
+    margin-bottom: 55px;
+}
+
 
 
 
