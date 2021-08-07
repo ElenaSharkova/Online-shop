@@ -14,6 +14,13 @@ $(function () {
         autoplay: true
         
     });
+    $('.contact-slider').slick({
+        slidesToShow: 10, //показывает сразу 10 картинок
+        slidesToScroll: 10, // перемотка при нажатии по 10 штук
+        dots: true, //врубили дотсы
+        arrows: false, // вырубили стрелочки
+        
+    });
     
     var mixer = mixitup('.gallery__inner', {
        load: {
