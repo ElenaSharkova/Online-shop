@@ -112,8 +112,8 @@
                                <a class="blog-one__tags-link" href="#">Chair</a>
                            </div>
                            <div class="blog-one__links">
-                               <a class=" blog-one__link blog-one__link-prev" href="#">Cred selfies edison bulb four dollar toast humblebrag</a>
-                               <a class="blog-one__link blog-one__link-next" href="#">Semiotics fixie four dollar toast, next level</a>
+                               <a class=" blog-one__link blog-one__link-prev" href="single-post-3.html">Cred selfies edison bulb four dollar toast humblebrag</a>
+                               <a class="blog-one__link blog-one__link-next" href="single-post-2.html">Semiotics fixie four dollar toast, next level</a>
                            </div>
                        </div>
                        <div class="blog-one__comments">
@@ -130,6 +130,13 @@
                            </div>
                            <form class="blog-one__form">
                                <h4 class="blog-one__form-title">Post a Comment</h4>
+                               <textarea class="blog-one__form-textarea" placeholder="Your comment"></textarea>
+                               <input class="blog-one__form-input" type="text" placeholder="Your name">
+                               <input class="blog-one__form-input" type="email" placeholder="Your e-mail">
+                               <label class="blog-one__form-label">
+                                   <input class="blog-one__form-labelinput" type="checkbox">Remember me
+                               </label>
+                               <button class="blog-one__form-btn" type="submit">Submit</button>
                            </form>
                    </div>
               <aside class="aside">
@@ -230,7 +237,12 @@
                         </p>
                         <a class="footer__info-email" href="mailto:ouremailaddress@email.com">ouremailaddress@email.com</a>
                         <form class="footer__form" action="">
-                            <input class="footer__form-input" type="text" placeholder="Subscribe by email">
+                           <!-- Hidden Required Fields -->
+		                   <input type="hidden" name="project_name" value="Desire">
+		                   <input type="hidden" name="admin_email" value="lena.sharkova.97@inbox.ru">
+		                   <input type="hidden" name="form_subject" value="footer-form">
+		                   <!-- END Hidden Required Fields -->
+                            <input class="footer__form-input" type="text" placeholder="Subscribe by email" name="Email">
                             <button class="footer__form-button" type="submit">Send</button>
                         </form>
                     </div>
@@ -279,7 +291,7 @@
   </div>
 
 
-
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

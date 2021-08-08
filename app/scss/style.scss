@@ -859,7 +859,7 @@
         position: relative;
     }
     &__img{
-        width: 170px;
+        max-width: 170px;
         height: 170px;
         object-fit: cover;
     }
@@ -933,7 +933,7 @@
         margin-right: 20px;
     }
     &__item-img{
-        width: 730px;
+        max-width: 730px;
         height: 415px;
     }
     &__items{
@@ -1024,7 +1024,7 @@
     }
 }
 .aside{
-    width: 350px;
+    max-width: 350px;
     margin-left: 30px;
     &__search{
         position: relative;
@@ -1152,7 +1152,7 @@
         margin-bottom: 35px;
     }
     &__link{
-        width: 243px;
+        max-width: 243px;
         position: relative;
         color: #707070;
         font-size: 14px;
@@ -1196,7 +1196,7 @@
         
     }
     &__comments-avatar{
-        width: 64px;
+        max-width: 64px;
         height: 64px;
         object-fit: cover;
         border-radius: 50%;
@@ -1224,6 +1224,66 @@
         font-weight: 600;
         font-size: 14px;
         
+    }
+    &__form{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__form-title{
+        margin-bottom: 25px;
+        color: $title;
+        @extend %title-font;
+        line-height: 23px;
+        
+    }
+    &__form-textarea{
+        resize: none;
+        width: 100%;
+        border: 1px solid #DFDFDF;
+        border-radius: 24px;
+        padding: 14px 17px;
+        min-height: 125px;
+        margin-bottom: 12px;
+        &::placeholder{
+            color: #A1A1A1;
+            font-weight: 600;
+            font-style: 16px;
+            line-height: 27px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+    }
+    &__form-input{
+        border: 1px solid #DFDFDF;
+        padding: 6px 17px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        width: 48%;
+        &::placeholder{
+            color: #A1A1A1;
+            font-size: 16px;
+            font-size: 16px;
+            line-height: 27px;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+    &__form-label{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #A1A1A1;
+        
+    }
+    &__form-btn{
+        border: none;// чтобы не было обводки вокруг кнопки
+        background-color: $title;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 21px;
+        padding: 6px 60px;
+        cursor: pointer;
     }
 }
 

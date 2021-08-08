@@ -154,35 +154,35 @@
         <section class="new-collection">
             <div class="container-fluid">
                 <div class="collection">
-                    <a class="collection__item" href="#">
+                    <a class="collection__item" href="single-post.html">
                         <img class="collection__images "src="images/content/collection-6.jpg" alt="collection-6">
                         <div class="collection__info">
                             <h6 class="collection__info-title">Truffaut literally trust</h6>
                             <p class="collection__info-text">Living room furntiture | Chair</p>
                         </div>
                     </a>
-                    <a class="collection__item" href="#">
+                    <a class="collection__item" href="single-post-2.html">
                         <img class="collection__images "src="images/content/collection-7.jpg" alt="collection-7">
                         <div class="collection__info">
                             <h6 class="collection__info-title">Truffaut literally trust</h6>
                             <p class="collection__info-text">Living room furntiture | Chair</p>
                         </div>
                     </a>
-                    <a class="collection__item" href="#">
+                    <a class="collection__item" href="single-post-3.html">
                         <img class="collection__images "src="images/content/collection-8.jpg" alt="collection-8">
                         <div class="collection__info">
                             <h6 class="collection__info-title">Truffaut literally trust</h6>
                             <p class="collection__info-text">Living room furntiture | Chair</p>
                         </div>
                     </a>
-                    <a class="collection__item" href="#">
+                    <a class="collection__item" href="single-post.html">
                         <img class="collection__images "src="images/content/collection-9.jpg" alt="collection-9">
                         <div class="collection__info">
                             <h6 class="collection__info-title">Truffaut literally trust</h6>
                             <p class="collection__info-text">Living room furntiture | Chair</p>
                         </div>
                     </a>
-                    <a class="collection__item" href="#">
+                    <a class="collection__item" href="single-post-2.html">
                         <img class="collection__images "src="images/content/collection-10.jpg" alt="collection-10">
                         <div class="collection__info">
                             <h6 class="collection__info-title">Truffaut literally trust</h6>
@@ -206,7 +206,12 @@
                         </p>
                         <a class="footer__info-email" href="mailto:ouremailaddress@email.com">ouremailaddress@email.com</a>
                         <form class="footer__form" action="">
-                            <input class="footer__form-input" type="text" placeholder="Subscribe by email">
+                           <!-- Hidden Required Fields -->
+		                   <input type="hidden" name="project_name" value="Desire">
+		                   <input type="hidden" name="admin_email" value="lena.sharkova.97@inbox.ru">
+		                   <input type="hidden" name="form_subject" value="footer-form">
+		                   <!-- END Hidden Required Fields -->
+                            <input class="footer__form-input" type="text" placeholder="Subscribe by email" name="Email">
                             <button class="footer__form-button" type="submit">Send</button>
                         </form>
                     </div>
@@ -255,7 +260,7 @@
   </div>
 
 
-
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
